@@ -9,6 +9,12 @@ router.get("/", async (req,res) => {
     res.json(listOfEmployee);
 });
 
+router.get('/byId/:id', async (req,res) => {
+    const id = req.params.id;
+    const post = await Employee.findByPk(id);
+    res.json(post);
+});
+
 //Post Request:
 router.post("/", async (req,res) => {
     const post = req.body;
