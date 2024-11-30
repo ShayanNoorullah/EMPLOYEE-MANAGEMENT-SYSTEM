@@ -131,14 +131,14 @@ span {
   height: 100%;
 }
 
-#left {
+.left {
   flex: 50%;
   height: calc(100vh - 70px);
   display: grid;
   place-items: center;
 }
 
-#right {
+.right {
   flex: 50%;
   height: calc(100vh - 70px);
   display: grid;
@@ -157,4 +157,73 @@ span {
 
 #individual .address {
   font-size: 25px;
+}
+
+.right .addCommentContainer {
+  flex: 20%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 25px;
+}
+
+.addCommentContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+}
+
+.addCommentContainer button {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.addCommentContainer input {
+  border: 2px solid dodgerblue;
+}
+
+.right .listOfComments {
+  flex: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listOfComments .comment {
+  width: 70%;
+  height: auto;
+  padding: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.loginContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.loginContainer input {
+  border: 2px solid dodgerblue;
 }

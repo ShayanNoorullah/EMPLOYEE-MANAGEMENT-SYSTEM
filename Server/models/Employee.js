@@ -13,6 +13,15 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-    })
-    return Employee
+    });
+
+    //ASSOCIATING EMPLOYEE TABLE WITH COMMENTS TABLE
+    Employee.associate = (models) => {
+        Employee.hasMany(models.Comments, {
+            onDelete: "cascade",
+        }); //EACH EMPLOYEE CAN HAVE MANY COMMENTS
+    };
+    
+
+    return Employee;
 }

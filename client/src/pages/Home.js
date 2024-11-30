@@ -16,7 +16,13 @@ function Home() {
     <div>
       {listOfEmployee.map((value,key) => {
       return (
-      <div className="Employee" onClick={() => {navigate(`/EmployeeInfo/${value.id}`)}}> 
+      <div
+        key={key}
+        className="Employee" 
+        onClick={() => {
+          navigate(`/EmployeeInfo/${value.id}`);
+          }}
+      > 
         <div className = "name">{value.name} </div> 
         <div className = "address">{value.address}</div>
         <div className = "phone">{value.phone}</div>
